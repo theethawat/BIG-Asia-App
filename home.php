@@ -1,4 +1,4 @@
-
+<!-- Not Successfullcode -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -121,9 +121,10 @@
             </div>
           </div>
       <div class="container">
-
+// IN XXXX this use to type your password but XXXX is not my password
+//In my Project I Make Table AFG BHR BAN BHU ... To YEM
       <?php
-    $conn=mysqli_connect("localhost","avmtsgmm_admin","Tttt2544","avmtsgmm_testmysql");
+    $conn=mysqli_connect("localhost","avmtsgmm_admin","XXXX","avmtsgmm_testmysql");
     //Selector Management
     $user=$_SESSION["user"];
     $sql="SELECT * FROM Member WHERE Usrname= '$user' ";
