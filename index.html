@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login </title>
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link href="style1.css" rel="stylesheet" type="text/css">
+    <script src="https://use.fontawesome.com/f1130c3fe8.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    
+   
+  </head>
+<body>
+<!-- Just an image -->
+<div><nav class="navbar sticky-top navbar-dark" style="background-color:deeppink;">
+        <a class="navbar-brand" href="#">
+          <img src="logowhite.png" width="40" height="30" alt="logo" class="d-inline-block align-top" >
+          BIGASIA
+        </a>
+      </nav>
+    </div>
+    
+    <div class="container" >
+        <br>
+        
+        
+        <div class="card">
+            <div class="card-body member" style="text-align:left; font-family: 'kanit',sans-serif;" >
+              <h4 class="regishead" style="text-align:center;" >เข้าสู่ระบบ</h4>
+        <form action="login.php" method="post">
+                <div class="form-group row">
+                <div class="col-sm-10">
+                    Username <br>
+                <input type="text" class="form-control"   name="username" required >  
+               </div>
+               <div class="col-sm-10">
+                    Password <br>
+                <input type="password" class="form-control"    name="password" required>  
+               </div>
+              </div>
+               <button type="submit"style="font-family: 'kanit',sans-serif; width:100%;" class="btn btn-primary">เข้าสู่ระบบ</button>
+            
+        </form>
+
+        <br>
+        <div class="row member">
+            <div class="col">
+            <p>ยังไม่ได้เป็นสมาชิก</p>
+        
+           <a href="register.html"><button type="button" class="btn btn-secondary">ลงทะเบียน</button></a>
+            </div>
+            <div class="col">
+              <p>Login as guest</p>
+        <form action="home.php" method="post">
+          <button type="submit" name="username"  class="btn btn-info" value="GUEST">Guest Login</button>
+        </form>
+            </div>
+          </div>
+        
+        
+        
+
+       </div></div>
+
+      </div>
+
+</body>
+</html>

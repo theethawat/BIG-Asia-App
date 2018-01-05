@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Knowleadge </title>
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link href="style2.css" rel="stylesheet" type="text/css">
+    <script src="https://use.fontawesome.com/f1130c3fe8.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+<!-- Just an image -->
+<nav class="navbar sticky-top navbar-dark" style="background-color:deeppink;">
+        <a class="navbar-brand" href="#">
+          <img src="logowhite.png" width="40" height="30" alt="logo" class="d-inline-block align-top" >
+          BIGASIA
+        </a>
+        <ul class="nav nav-pills nav-fill mr-auto">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:white;" >  USER MENU </a>
+                  <div class="dropdown-menu" >
+              <a class="dropdown-item" href="logout.php">Logout</a>
+              <a class="dropdown-item" href="setting.php">Setting</a>
+              </div>
+                </li>
+                </ul>
+         <ul class="nav nav-pills nav-fill ">
+                                <li class="nav-item">
+                                      <button class="menubut" data-toggle="modal" data-target="#menumodal">
+                                        <i class="fa fa-bars " aria-hidden="true"></i>
+                                            </button>
+                                  </li>
+      </nav>
+      <br>
+      <div class="modal fade" id="menumodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel" style="font-family: 'kanit',sans-serif;">เมนู</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      
+                            <div class="row">
+    
+                                    <div class="col">
+                                        <a href="asia.html"><button class="btn btn-secondary mainmenu"><h2><i class="fa fa-globe " aria-hidden="true"></i></h2><h6>เกี่ยวกับทวีปเอเชีย</h6></button></a>
+                                    </div>
+                        
+                                    <div class="col">
+                                            <a href="knowledge.html"><button class="btn btn-secondary mainmenu"><h2><i class="fa fa-flag" aria-hidden="true"></i></h2><h6>ข้อมูลประเทศ</h6></button></a>
+                                    </div>
+                        
+                                </div>
+                          <br>
+                          <div class="row">
+                        
+                                <div class="col">
+                                    <a href="history.html"><button class="btn btn-secondary mainmenu"><h2><i class="fa fa-university " aria-hidden="true"></i></h2><h6>ประวัติศาสตร์</h6></button></a>
+                                </div>
+                        
+                                <div class="col">
+                                        <a href="time.html"><button class="btn btn-secondary mainmenu"><h2><i class="fa fa-clock-o " aria-hidden="true"></i></h2><h6>เช็คเวลา</h6></button></a>
+                                </div>
+                        
+                            </div>
+                             <br>
+                          <div class="row">
+                        
+                                <div class="col">
+                                    <a href="currency.html"><button class="btn btn-secondary mainmenu"><h2><i class="fa fa-usd  " aria-hidden="true"></i></h2><h6>แปลงค่าเงิน</h6></button></a>
+                                </div>
+                        
+                                <div class="col">
+                                        <a href="home.php"><button class="btn btn-secondary mainmenu"><h2><i class="fa fa-newspaper-o " aria-hidden="true"></i></h2><h6>ข่าวสาร</h6></button></a>
+                                </div>
+                        
+                            </div>
+                            <br>
+                            <div class="row">
+                          
+                                  <div class="col">
+                                      <a href="setcountry.php"><button class="btn btn-secondary mainmenu"><h2><i class="fa fa-cog  " aria-hidden="true"></i></h2><h6>แก้ไขประเทศที่ติดตาม</h6></button></a>
+                                  </div>
+                                  <div class="col">
+                                          <a href="menux.html"><button class="btn btn-secondary mainmenu"><h2><i class="fa fa-paper-plane  " aria-hidden="true"></i></h2><h6>เมนูอื่นๆ</h6></button></a>
+                                  </div>
+                          
+                              </div>
+    
+    
+    
+    
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+      <div class="container">
+            <div class="row">
+                    <div class="col">
+                         <a href="nation/afg.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Afghanistan.svg" class="flagp1" alt="AFG Flag"></a>
+                         <h6 class="nationname">อัฟกานิสถาน</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/bhr.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Bahrain.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">บาห์เรน</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/ban.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">บังกลาเทศ</h6>
+                    </div>
+                  </div>
+                  <br>
+         <div class="row">
+                    <div class="col">
+                         <a href="nation/bhu.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Flag_of_Bhutan.svg" class="flagp1" alt="AFG Flag"></a>
+                         <h6 class="nationname">ภูฏาน</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/bru.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Brunei.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">บรูไน</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/cam.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_Cambodia.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">กัมพูชา</h6>
+                    </div>
+                  </div>
+       <br>
+         <div class="row">
+                    <div class="col">
+                         <a href="nation/chn.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg" class="flagp1" alt="AFG Flag"></a>
+                         <h6 class="nationname">จีน</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/ind.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_India.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">อินเดีย</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/idn.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">อินโดนีเซีย</h6>
+                    </div>
+                  </div>
+        <br>
+         <div class="row">
+                    <div class="col">
+                         <a href="nation/irn.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg" class="flagp1" alt="AFG Flag"></a>
+                         <h6 class="nationname">อิหร่าน</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/irq.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Flag_of_Iraq.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">อิรัก</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/isr.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Israel.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">อิสราเอล</h6>
+                    </div>
+                  </div>
+                  <br>
+         <div class="row">
+                    <div class="col">
+                         <a href="nation/jpn.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg" class="flagp1" alt="AFG Flag"></a>
+                         <h6 class="nationname">ญี่ปุ่น</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/jor.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Flag_of_Jordan.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">จอร์แดน</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/kaz.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Flag_of_Kazakhstan.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">คาซัคสถาน</h6>
+                    </div>
+                  </div>
+                          <br>
+         <div class="row">
+                    <div class="col">
+                         <a href="nation/kuw.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Flag_of_Kuwait.svg" class="flagp1" alt="AFG Flag"></a>
+                         <h6 class="nationname">คูเวต</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/kgz.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Kyrgyzstan.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">คีร์กีซสถาน</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/lao.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Laos.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">ลาว</h6>
+                    </div>
+                  </div>
+                                    <br>
+         <div class="row">
+                    <div class="col">
+                         <a href="nation/lib.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Flag_of_Lebanon.svg" class="flagp1" alt="AFG Flag"></a>
+                         <h6 class="nationname">เลบานอน</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/mas.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Flag_of_Malaysia.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">มาเลเซีย</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/mdv.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Flag_of_Maldives.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">มัลดีฟส์</h6>
+                    </div>
+                  </div>
+                      <br>
+         <div class="row">
+                    <div class="col">
+                         <a href="nation/mng.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Mongolia.svg" class="flagp1" alt="AFG Flag"></a>
+                         <h6 class="nationname">มองโกเลีย</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/mya.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Flag_of_Myanmar.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">เมียนมาร์</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/npe.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">เนปาล</h6>
+                    </div>
+                  </div>
+                  <br>
+            <div class="row">
+                    <div class="col">
+                         <a href="nation/prk.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Flag_of_North_Korea.svg" class="flagp1" alt="AFG Flag"></a>
+                         <h6 class="nationname">เกาหลีเหนือ</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/oma.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Oman.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">โอมาน</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/pak.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">ปากีสถาน</h6>
+                    </div>
+                  </div>
+                   <br>
+            <div class="row">
+                    <div class="col">
+                         <a href="nation/ple.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg" class="flagp1" alt="AFG Flag"></a>
+                         <h6 class="nationname">ปาเลสไตน์</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/phi.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_the_Philippines.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">ฟิลิปปินส์</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/qat.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Qatar.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">กาตาร์</h6>
+                    </div>
+                  </div>
+                   <br>
+            <div class="row">
+                    <div class="col">
+                         <a href="nation/ksa.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg" class="flagp1" alt="AFG Flag"></a>
+                         <h6 class="nationname">ซาอุดิอาระเบีย</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/sin.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Singapore.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">สิงคโปร์</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/kor.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">เกาหลีใต้</h6>
+                    </div>
+                  </div>
+                             <br>
+            <div class="row">
+                    <div class="col">
+                         <a href="nation/sri.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Sri_Lanka.svg" class="flagp1" alt="AFG Flag"></a>
+                         <h6 class="nationname">ศรีลังกา</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/syr.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Flag_of_Syria.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">ซีเรีย</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/tpe.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Flag_of_the_Republic_of_China.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">ไต้หวัน</h6>
+                    </div>
+                  </div>
+                                   <br>
+            <div class="row">
+                    <div class="col">
+                         <a href="nation/tjk.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Flag_of_Tajikistan.svg" class="flagp1" alt="AFG Flag"></a>
+                         <h6 class="nationname">ทาจิกิสถาน</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/tha.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">ไทย</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/tls.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Flag_of_East_Timor.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">ติมอร์-เลสเต</h6>
+                    </div>
+                  </div>
+           <br>
+            <div class="row">
+                    <div class="col">
+                         <a href="nation/tkm.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Flag_of_Turkmenistan.svg" class="flagp1" alt="AFG Flag"></a>
+                         <h6 class="nationname">เติร์กเมนิสถาน</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/uae.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">สหรัฐอาหรับเอมิเรตส์</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/uzb.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Uzbekistan.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">อุซเบกิสถาน</h6>
+                    </div>
+                  </div>
+                     <br>
+            <div class="row">
+                    <div class="col">
+                         <a href="nation/vie.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" class="flagp1" alt="AFG Flag"></a>
+                         <h6 class="nationname">เวียดนาม</h6>
+                    </div>
+                    <div class="col">
+                            <a href="nation/yem.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Flag_of_Yemen.svg" class="flagp1" alt="AFG Flag"></a>
+                            <h6 class="nationname">เยเมน</h6>
+                    </div>
+                  </div>
+    </div>
+    <br><br><br><br><br>
+    <nav class="navbar fixed-bottom navbar-light bg-light" >
+        <nav class="nav nav-pills nav-justified">
+                                <a class="nav-item nav-link " href="home.php"><i class="fa fa-home" aria-hidden="true"></i><br>Home</a>
+                            
+                              
+                                <a class="nav-item nav-link" style="background-color:gainsboro ;" data-toggle="modal" data-target="#postmodal" href="#"><i class="fa fa-paper-plane-o" aria-hidden="true"></i><br>Post</a>
+                                <a class="nav-item nav-link" style="background-color:gainsboro;" data-toggle="modal" data-target="#menumodal" href="#"><i class="fa fa-bars" aria-hidden="true"></i><br>Menu</a>
+                            
+                            
+                                <a class="nav-item nav-link " href="knowledge.html"><i class="fa fa-flag" aria-hidden="true"></i><br>Country</a>
+                                
+                              </nav>
+          </nav>
+    
+          <div class="modal fade" id="postmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">โพสต์</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="nation/rec.php" method="post">
+            <textarea class="form-control" name="News" rows="3"></textarea><br>
+            <select class="form-control" name="country">
+            <option value="AFG">อัฟกานิสถาน</option>
+            <option value="BHR">บาห์เรน</option>
+            <option value="BAN">บังกลาเทศ</option>
+            <option value="BHU">ภูฏาน</option>
+            <option value="BRU">บรูไน</option>
+            <option value="CAM">กัมพูชา</option>
+            <option value="CHN">จีน</option>
+            <option value="IND">อินเดีย</option>
+            <option value="IDN">อินโดนีเซีย</option>
+            <option value="IRN">อิหร่าน</option>
+            <option value="IRQ">อิรัก</option>
+            <option value="ISR">อิสราเอล</option>
+            <option value="JPN">ญี่ปุ่น</option>
+            <option value="JOR">จอร์แดน</option>
+            <option value="KAZ">คาซัคสถาน</option>
+            <option value="KUW">คูเวต</option>
+            <option value="KGZ">คีร์กีซสถาน</option>
+            <option value="LAO">ลาว</option>
+            <option value="LIB">เลบานอน</option>
+            <option value="MAS">มาเลเซีย</option>
+            <option value="MDV">มัลดีฟส์</option>
+            <option value="MNG">มองโกเลีย</option>
+            <option value="MYA">เมียนมาร์</option>
+            <option value="NPE">เนปาล</option>
+            <option value="PRK">เกาหลีเหนือ</option>
+            <option value="OMA">โอมาน</option>
+            <option value="PAK">ปากีสถาน</option>
+            <option value="PLE">ปาเลสไตน์</option>
+            <option value="PHI">ฟิลิปปินส์</option>
+            <option value="QAT">กาตาร์</option>
+            <option value="KSA">ซาอุดิอาระเบีย</option>
+            <option value="SIN">สิงคโปร์</option>
+            <option value="KOR">เกาหลีใต้</option>
+            <option value="SRI">ศรีลังกา</option>
+            <option value="SYR">ซีเรีย</option>
+            <option value="TPE">ไต้หวัน</option>
+            <option value="TJK">ทาจิกิสถาน</option>
+            <option value="THA">ไทย</option>
+            <option value="TLS">ติมอร์-เลสเต</option>
+            <option value="TKM">เติร์กเมนิสถาน</option>
+            <option value="UAE">สหรัฐอาหรับเอมิเรตส์</option>
+            <option value="UZB">อุซเบกิสถาน</option>
+            <option value="VIE">เวียดนาม</option>
+            <option value="YEM">เยเมน</option>
+         
+    </select>
+          <button type="submit" class="btn btn-primary" >โพสต์</button>
+    
+</body>
+</html>

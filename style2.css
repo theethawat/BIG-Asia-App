@@ -1,0 +1,65 @@
+a.navbar-brand
+{
+    font-family: 'kanit',sans-serif;
+}
+a.nav-item.nav-link.active
+{
+    background-color: lightgray;
+    color: black;
+}
+a.nav-item.nav-link
+{
+    color: deeppink;
+    font-family: 'kanit',sans-serif;
+}
+a.nav-item.nav-link.disabled
+{
+    color: gray;
+}
+nav.nav-pills.nav-justified
+{
+    width: 100%;
+}
+img.flagp1
+{
+    border-radius: 10px;
+    height: 40px;
+    width:50px;
+    
+}
+div.col
+{
+    text-align: center;
+}
+h6.nationname
+{
+    font-family: 'kanit',sans-serif;
+}
+h4.regishead
+{
+    font-family: 'kanit',sans-serif;
+}
+div.row.member
+{
+    text-align: left;
+    font-family: 'kanit',sans-serif;
+}
+h4.headlogin{
+    text-align: center;
+    font-family: 'kanit',sans-serif;
+    
+}
+button.btn-secondary.mainmenu
+{
+    width: 100%;
+    padding: 1em;
+    font-family: 'kanit',sans-serif;
+    height: 100px;
+}
+button.menubut{
+    background-color: transparent;
+    border:white;
+    color:white;
+    font-size: 18px;
+    font-family: 'kanit',sans-serif;
+}
