@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>เวลาทั่วเอเชีย </title>
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link rel="icon" href="logosquare.png">
+    <script src="https://use.fontawesome.com/f1130c3fe8.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="style2.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script src="time.js"> </script>
+<style>
+    h5.head2{
+        font-family: 'kanit',sans-serif;
+    }
+</style>
+</head>
+<body>
+    
+<!-- Just an image -->
+<nav class="navbar sticky-top navbar-dark" style="background-color:deeppink;">
+        <a class="navbar-brand" href="#">
+          <img src="logowhite.png" width="40" height="30" alt="logo" class="d-inline-block align-top" >
+          BIGASIA
+        </a>
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+              <a class="nav-link" style="color:white;" href="home.php"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+            </li></ul>
+      </nav>
+      <br>
+      <div class="container" >
+         
+        <br>
+        <!-- DISPLAY LOCAL TIME -->
+        <div class="card">
+            <div class="card-body">
+                 <h3>Local Time   </h3>
+                 <h1 id="time"></h1>
+              </div></div>
+
+        <br>
+              
+        <div class=card>
+            <div class="card-body">
+                <h5 class="head2"> เลือกประเทศที่ต้องการทราบเวลา</h5>
+                <p>เวลาจะอ้างอิงจากเมืองหลวง</p>
+                <br>
+                <select   onchange="timeget(this.value)" class="form-control" name="country" >
+                                <option value="AFG">อัฟกานิสถาน (คาบูล) </option>
+                                <option value="BHR">บาห์เรน (มานามา) </option>
+                                <option value="BAN">บังกลาเทศ (ทากา) </option>
+                                <option value="BHU">ภูฏาน (ทิมพู) </option>
+                                <option value="BRU">บรูไน (บันดาร์ เซอร์รี เบกาวัน)</option>
+                                <option value="CAM">กัมพูชา (พนมเปญ)</option>
+                                <option value="CHN">จีน (ปักกิ่ง)</option>
+                                <option value="IND">อินเดีย (นิวเดลี)</option>
+                                <option value="IDN">อินโดนีเซีย (จาร์การ์ตา)</option>
+                                <option value="IRN">อิหร่าน (เตหะราน)</option>
+                                <option value="IRQ">อิรัก (แบกแดด)</option>
+                                <option value="ISR">อิสราเอล (เทลอาวีฟ)</option>
+                                <option value="JPN">ญี่ปุ่น (โตเกียว)</option>
+                                <option value="JOR">จอร์แดน (อัมมาน)</option>
+                                <option value="KAZ">คาซัคสถาน (อัสตานา)</option>
+                                <option value="KUW">คูเวต (คูเวตซิตี้)</option>
+                                <option value="KGZ">คีร์กีซสถาน (บิชเคก)</option>
+                                <option value="LAO">ลาว (เวียงจันทน์)</option>
+                                <option value="LIB">เลบานอน (เบรุต)</option>
+                                <option value="MAS">มาเลเซีย (กัวลาลัมเปอร์)</option>
+                                <option value="MDV">มัลดีฟส์ (มาเล)</option>
+                                <option value="MNG">มองโกเลีย (อูลานบาตาร์)</option>
+                                <option value="MYA">เมียนมาร์ (เนปยีดอ)</option>
+                                <option value="NPE">เนปาล (กาฐมาณฑุ)</option>
+                                <option value="PRK">เกาหลีเหนือ (เปียงยาง)</option>
+                                <option value="OMA">โอมาน (มัสกัต)</option>
+                                <option value="PAK">ปากีสถาน (อิสลามาบัด)</option>
+                                <option value="PLE">ปาเลสไตน์ (รอมัลลอฮ์)</option>
+                                <option value="PHI">ฟิลิปปินส์ (มะนิลา)</option>
+                                <option value="QAT">กาตาร์ (โดฮา)</option>
+                                <option value="KSA">ซาอุดิอาระเบีย (ริยาด)</option>
+                                <option value="SIN">สิงคโปร์ (สิงคโปร์)</option>
+                                <option value="KOR">เกาหลีใต้ (โซล)</option>
+                                <option value="SRI">ศรีลังกา (โกฏเฏ)</option>
+                                <option value="SYR">ซีเรีย (ดามัสกัส)</option>
+                                <option value="TPE">ไต้หวัน (ไทเป)</option>
+                                <option value="TJK">ทาจิกิสถาน (ดูชานเบ)</option>
+                                <option value="THA">ไทย (กรุงเทพมหานคร)</option>
+                                <option value="TLS">ติมอร์-เลสเต (ดิลี)</option>
+                                <option value="TKM">เติร์กเมนิสถาน (อาชกาบัต)</option>
+                                <option value="UAE">สหรัฐอาหรับเอมิเรตส์ (อาบูดาบี)</option>
+                                <option value="UZB">อุซเบกิสถาน (ทาชเคนต์)</option>
+                                <option value="VIE">เวียดนาม (ฮานอย)</option>
+                                <option value="YEM">เยเมน (ซานา)</option>
+                             
+                        
+                        </select>
+                <br>
+                <!-- <button class="btn btn-primary" onclick="timeget()">ค้นหา</button> -->
+                <br>
+                <h2 id="showtime"> รับข้อมูล</h2>
+                <p>ข้อมูลเวลานี้ขอขอบคุณข้อมูลอ้างอิงจาก <a href="https://www.timeanddate.com">TimeandDate.com</a></p>
+
+            </div>
+        </div>
+        <br>
+        <!-- make a row -->
+         <div class="row">
+                <div class="col">
+                        <div class="card alert-secondary" >
+                                <div class="card-body">
+                                     <h6>UTC Time</h6>
+                                    <h2 id="utctime"></h2>
+                                </div>
+                            </div>
+                </div>
+
+                <div class="col">
+                        <div class="card alert-secondary" >
+                                <div class="card-body">
+                                    
+                                     <h6>Bangkok,Thailand</h6>
+                                    <h2 id="bangkok"></h2>
+                    
+                                </div>
+                            </div>
+                </div>
+        </div> <!-- close row -->
+        <br>
+
+        <div class="row">
+                <div class="col">
+                        <div class="card alert-secondary" >
+                                <div class="card-body">
+                                     <h6>Almaty,Kazakhstan</h6>
+                                    <h2 id="almaty"></h2>
+                                </div>
+                            </div>
+                </div>
+
+                <div class="col">
+                        <div class="card alert-secondary" >
+                                <div class="card-body">
+                                    
+                                     <h6>Beijing,China</h6>
+                                    <h2 id="beijing"></h2>
+                                    
+                    
+                                </div>
+                            </div>
+                </div>
+            <br>
+        
+
+        
+
+    
+
+       
+
+        <!-- Script Zone -->
+        <script>
+        var time = new Date();
+        var hour= time.getHours();
+        var min =time.getMinutes();
+        if(min<10)
+        {
+            min="0"+min;
+        }
+        document.getElementById("time").innerHTML=hour+":"+min  ;
+
+        var utchour= time.getUTCHours();
+        var utcmin =time.getUTCMinutes();
+        var utcmindis;
+        if(utcmin<10)
+        {
+           utcmindis="0"+utcmin;
+        }
+        else
+        {
+            utcmindis=utcmin;
+        }
+        if(utchour>=24)
+        {
+           utchourdis=utchour-24;
+        }
+        else
+        {
+            utchourdis=utchour;
+        }
+        document.getElementById("utctime").innerHTML=utchourdis+":"+utcmindis ;
+
+        var bangkokhour = utchour + 7;
+        var bangkokmin = utcmin + 0 ;
+        if(bangkokmin<10)
+        {
+            bangkokmin="0"+bangkokmin;
+        }
+        if(bangkokhour>=24)
+        {
+            bangkokhour=bangkokhour-24;
+        }
+        document.getElementById("bangkok").innerHTML=bangkokhour+":"+bangkokmin  ;
+
+        var almatyhour = utchour + 6;
+        var almatymin = utcmin + 0 ;
+        if(almatymin<10)
+        {
+            almatymin="0"+almatykmin;
+        }
+        if(almatyhour>=24)
+        {
+            almatyhour=almatyhour-24;
+        }
+        document.getElementById("almaty").innerHTML=almatyhour+":"+almatymin  ;
+
+        var beijinghour = utchour + 8;
+        var beijingmin = utcmin + 0 ;
+        if(beijingmin<10)
+        {
+            beijingmin="0"+beijingkmin;
+        }
+        if(beijinghour>=24)
+        {
+            beijinghour=beijinghour-24;
+        }
+        document.getElementById("beijing").innerHTML=beijinghour+":"+beijingmin  ;
+
+
+        </script>
+
+
+        </div><!-- Container div Close -->
+
+    <br><br><br><br><br>
+    <nav class="navbar fixed-bottom navbar-light bg-light" >
+        <nav class="nav nav-pills nav-justified">
+          <a class="nav-item nav-link " href="home.php"><i class="fa fa-home" aria-hidden="true"></i><br>Home</a>
+          <a class="nav-item nav-link" data-toggle="modal" data-target="#postmodal" href="#"><i class="fa fa-paper-plane-o" aria-hidden="true"></i><br>Post</a>
+          <a class="nav-item nav-link  " href="knowledge.html"><i class="fa fa-flag" aria-hidden="true"></i><br>Country</a>
+          
+        </nav>
+            </nav>
+    
+            <div class="modal fade" id="postmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">โพสต์</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="rec.php" method="post" enctype="multipart/form-data">
+              <textarea class="form-control" name="News" rows="3"></textarea><br>
+              <select class="form-control" name="country">
+              <option value="AFG">อัฟกานิสถาน</option>
+              <option value="BHR">บาห์เรน</option>
+              <option value="BAN">บังกลาเทศ</option>
+              <option value="BHU">ภูฏาน</option>
+              <option value="BRU">บรูไน</option>
+              <option value="CAM">กัมพูชา</option>
+              <option value="CHN">จีน</option>
+              <option value="IND">อินเดีย</option>
+              <option value="IDN">อินโดนีเซีย</option>
+              <option value="IRN">อิหร่าน</option>
+              <option value="IRQ">อิรัก</option>
+              <option value="ISR">อิสราเอล</option>
+              <option value="JPN">ญี่ปุ่น</option>
+              <option value="JOR">จอร์แดน</option>
+              <option value="KAZ">คาซัคสถาน</option>
+              <option value="KUW">คูเวต</option>
+              <option value="KGZ">คีร์กีซสถาน</option>
+              <option value="LAO">ลาว</option>
+              <option value="LIB">เลบานอน</option>
+              <option value="MAS">มาเลเซีย</option>
+              <option value="MDV">มัลดีฟส์</option>
+              <option value="MNG">มองโกเลีย</option>
+              <option value="MYA">เมียนมาร์</option>
+              <option value="NPE">เนปาล</option>
+              <option value="PRK">เกาหลีเหนือ</option>
+              <option value="OMA">โอมาน</option>
+              <option value="PAK">ปากีสถาน</option>
+              <option value="PLE">ปาเลสไตน์</option>
+              <option value="PHI">ฟิลิปปินส์</option>
+              <option value="QAT">กาตาร์</option>
+              <option value="KSA">ซาอุดิอาระเบีย</option>
+              <option value="SIN">สิงคโปร์</option>
+              <option value="KOR">เกาหลีใต้</option>
+              <option value="SRI">ศรีลังกา</option>
+              <option value="SYR">ซีเรีย</option>
+              <option value="TPE">ไต้หวัน</option>
+              <option value="TJK">ทาจิกิสถาน</option>
+              <option value="THA">ไทย</option>
+              <option value="TLS">ติมอร์-เลสเต</option>
+              <option value="TKM">เติร์กเมนิสถาน</option>
+              <option value="UAE">สหรัฐอาหรับเอมิเรตส์</option>
+              <option value="UZB">อุซเบกิสถาน</option>
+              <option value="VIE">เวียดนาม</option>
+              <option value="YEM">เยเมน</option>
+           
+      </select>
+      <input  type="file" name="photo" id="photo">
+      <p><b>ข้อกำหนดในการโพสรูปภาพ</b> คือ ต้องไม่โพสภาพที่สื่อความหมายร้ายแรง ภาพอนาจารย์ หรือภาพที่ไม่สมควรโพส</p>
+            <button type="submit" class="btn btn-primary" >โพสต์</button>
+      
+</body>
+</html>
+<!--     
+                -->

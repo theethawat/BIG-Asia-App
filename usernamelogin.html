@@ -31,11 +31,11 @@
         <div class="card">
             <div class="card-body member" style="text-align:left; font-family: 'kanit',sans-serif;" >
               <h4 class="regishead" style="text-align:center;" >เข้าสู่ระบบ</h4>
-        <form action="login.php" method="post">
+        <form action="usernamelogin.php" method="post">
                 <div class="form-group row">
                 <div style="width:100%;">
-                    Email <br>
-                <input type="email" class="form-control"   name="email" required >  
+                    Username <br>
+                <input type="text" class="form-control"   name="username" required >  
                </div>
                <div style="width:100%;">
                     Password <br>
@@ -46,10 +46,9 @@
             
         </form>
         <br>
-        <a href="relogin.php"><button type="button" class="btn btn-light" style="font-family: 'kanit',sans-serif; width:100%;"><i class="fa fa-user" aria-hidden="true"></i> ล็อกอินในชื่อผู้ใช้เดิมที่ยังไม่ได้ล็อกเอาท์</button></a>
+      
         <br>
-        <br>
-        แบบนี้ยากใช่มั้ย ?  <a href="usernamelogin.html"> ล็อกอินโดยใช้ Username </a>
+        กลับไปใช้แบบเดิม ?  <a href="index.html"> ล็อกอินโดยใช้อีเมล </a>
         <br>
         <br>
         <div class="row member">
@@ -60,9 +59,9 @@
             </div>
             <div class="col">
               <p>Login as guest</p>
-    
-         <a href="guestlogin.php"> <button class="btn btn-info" >Guest Login</button></a>
-    
+
+              <a href="guestlogin.php"> <button class="btn btn-info" >Guest Login</button></a>
+
             </div>
           </div>
         

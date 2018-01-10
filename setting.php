@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home </title>
+    <title>การตั้งค่า</title>
     <link rel="icon" href="logosquare.png">
     <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
     
@@ -19,19 +19,20 @@
 <script>mdc.autoInit()</script>
 <link href="style2.css" rel="stylesheet" type="text/css">
 <style>
+
   p.auther{
     font-family:'kanit',sans-serif;
-  }
-  h5.headone{
+    }
+     h5.headone{
     font-family:'kanit',sans-serif;
-  }
-  img.imageup{
+    }
+    img.imageup{
     height:150px;
-  }
+    }
   </style>
 </head>
 <body>
-    <?php
+<?php
     session_start();
     ?>
     <!-- Just an image -->
@@ -127,265 +128,83 @@
               </div>
             </div>
           </div>
-      <div class="container">
-        <h5 class="headone"><i class="fa fa-paper-plane" aria-hidden="true"></i> News Feed</h5>
-      <div class="alert alert-info" role="alert" >
-      
-     ท่านสามารถปรับเปลี่ยนประเทศที่ติดตามได้ <a href="setcountry.php">ที่นี่</a> หรือคลิกที่เมนูทั้งข้างล่างและมุมบนขวา <br>
-     และลบโพสต์ที่เขียนได้ที่ Setting โดยกดข้างๆ Username ของท่าน
-      </div>
+   <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="headone">เปลี่ยน Password</h5>
+          <form action="passwordchange.php" method ="post">
+              ใส่รหัสเดิมของคุณ : <br>
+              <input type="password" class="form-control" name="oldpassword"><br>
+              ใส่รหัสใหม่ของคุณ : <br>
+              <input type="password" class="form-control" name="newpassword"><br>
+              <button type="submit" class="btn btn-primary">เปลี่ยนรหัสผ่าน</button>
+          </form>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+        <div class="card-body">
+          <h5 class="headone">ลบโพสต์ที่เคยเขียนไว้</h5>
+  <?php
 
-      <?php
-    $conn=mysqli_connect("localhost","avmtsgmm_admin","Tttt2544","avmtsgmm_testmysql");
-    //Selector Management
-    $user=$_SESSION["user"];
-    $sql="SELECT * FROM Member WHERE Username= '$user' ";
-    $memo=mysqli_query($conn,$sql);
-    $row1 = mysqli_fetch_assoc($memo);
-  
-  
-  //FOURTH SET
-  $nationname = array("SaudiArabia","Singapore","SouthKorea","SriLanka","Syria","Taiwan","Tajikistan","Thailand","Timor-Leste","Turkmenistan");
+  $user=$_SESSION["user"];
+
+  //Login Connect Database
+  $conn=mysqli_connect("localhost","avmtsgmm_admin","Tttt2544","avmtsgmm_testmysql");
+  $nationname = array("Afghanistan","Bahrain","Bangladesh","Bhutan","Brunei","Cambodia","China","India","Indonesia","Iran","Iraq","Israel","Japan","Jordan","Kazakhstan","Kuwait","Kyrgyzstan","Laos","Lebanon","Malaysia","Maldives","Mongolia","Myanmar","Nepal","Northkorea","Oman","Pakistan","Palestine","Philippines","Qatar","SaudiArabia","Singapore","SouthKorea","SriLanka","Syria","Taiwan","Tajikistan","Thailand","Timor-Leste","Turkmenistan","UnitedArabEmirates","Uzbekistan","Vietnam","Yemen");
+  //,
+     $nationshort =array("AFG","BHR","BAN","BHU","BRU","CAM","CHN","IND","IDN","IRN","IRQ","ISR","JPN","JOR","KAZ","KUW","KGZ","LAO","LIB","MAS","MDV","MNG","MYA","NPE","PRK","OMA","PAK","PLE","PHI","QAT","KSA","SIN","KOR","SRI","SYR","TPE","TJK","THA","TLS","TKM","UAE","UZB","VIE","YEM");
+     $thainame=array("อัฟกานิสถาน","บาห์เรน","บังกลาเทศ","ภูฏาน","บรูไน","กัมพูชา","จีน","อินเดีย","อินโดนีเซีย","อิหร่าน","อิรัก","อิสราเอล","ญี่ปุ่น","จอร์แดน","คาซัคสถาน","คูเวต","คีร์กีซสถาน","ลาว","เลบานอน","มาเลเซีย","มัลดีฟส์","มองโกเลีย","เมียนมาร์","เนปาล","เกาหลีเหนือ","โอมาน","ปากีสถาน","ปาเลสไตน์","ฟิลิปปินส์","กาตาร์","ซาอุดิอาระเบีย","สิงคโปร์","เกาหลีใต้","ศรีลังกา","ซีเรีย","ไต้หวัน","ทาจิกิสถาน","ไทย","ติมอร์-เลสเต","เติร์กเมนิสถาน","สหรัฐอาหรับเอมิเรตส์","อุซเบกิสถาน","เวียดนาม","เยเมน");
  
-     $nationshort =array("KSA","SIN","KOR","SRI","SYR","TPE","TJK","THA","TLS","TKM");
-     $shortsmall=array("ksa","sin","kor","sri","syr","tpe","tjk","tha","tls","tkm");
-     $thainame=array("ซาอุดิอาระเบีย","สิงคโปร์","เกาหลีใต้","ศรีลังกา","ซีเรีย","ไต้หวัน","ทาจิกิสถาน","ไทย","ติมอร์-เลสเต","เติร์กเมนิสถาน");
-  for($j=0 ;$j<10 ; $j++)
+     for($j=0 ;$j<44 ; $j++)
       {
-     if($row1["$nationname[$j]"]==1)
-        {
           $short=$nationshort[$j];
           $funame=$thainame[$j];
-          $small=$shortsmall[$j];
+  
           //echo $short." ";
-          $sql="SELECT Usrname,Newsadd,Adddate,Fileup FROM $short ORDER BY ID DESC";
+          $sql="SELECT ID,Usrname,Newsadd,Adddate,Fileup  FROM $short WHERE Usrname='$user' ORDER BY ID DESC";
   
           $result=mysqli_query($conn,$sql);
           
       
           if(mysqli_num_rows($result)>0)
           {
-              for($i=0 ; $i<3 ; $i++)
+              while($row = mysqli_fetch_assoc($result))
               {
-                  $row = mysqli_fetch_assoc($result);
                   if($row["Newsadd"]!=NULL)
                   {
                     print "<div class='card'><div class='card-body'>";
-                    print "<p class='auther'> <b>". $row["Usrname"] ."</b> โพสต์ใน <a href='nation/".$small.".html'>".$funame."</a> เมื่อ ".$row["Adddate"]."</p>";
-                    if($row["Fileup"]!=NULL)
-                    {
-                      print "<img class='imageup' src='nation/File/".$row["Fileup"]."'> <br>";
-                    }
-                    print $row["Newsadd"];
-                    print "</div></div>";
-                    print "<br>";
-                  }
-              }
-          }
-          
-        }    
-      }
-    
-      // Example $cars[0]
-      //END OF FOURTH SET
-    
-
-  //FIFTH SET
-  $nationname = array("UnitedArabEmirates","Uzbekistan","Vietnam","Yemen");
-
-     $nationshort =array("UAE","UZB","VIE","YEM");
-     $shortsmall=array("uae","uzb","vie","yem");
-     $thainame=array("สหรัฐอาหรับเอมิเรตส์","อุซเบกิสถาน","เวียดนาม","เยเมน");
-  for($j=0 ;$j<4 ; $j++)
-      {
-     if($row1["$nationname[$j]"]==1)
-        {
-          $short=$nationshort[$j];
-          $funame=$thainame[$j];
-          $small=$shortsmall[$j];
-          //echo $short." ";
-          $sql="SELECT Usrname,Newsadd,Adddate,Fileup FROM $short ORDER BY ID DESC";
-  
-          $result=mysqli_query($conn,$sql);
-          
-      
-          if(mysqli_num_rows($result)>0)
-          {
-              for($i=0 ; $i<3 ; $i++)
-              {
-                  $row = mysqli_fetch_assoc($result);
-                  if($row["Newsadd"]!=NULL)
-                  {
-                    print "<div class='card'><div class='card-body'>";
-                    print "<p class='auther'> <b>". $row["Usrname"] ."</b> โพสต์ใน <a href='nation/".$small.".html'>".$funame."</a> เมื่อ ".$row["Adddate"]."</p>";
-                    if($row["Fileup"]!=NULL)
-                    {
-                      print "<img class='imageup' src='nation/File/".$row["Fileup"]."'> <br>";
-                    }
-                    print $row["Newsadd"];
-                    print "</div></div>";
-                    print "<br>";
-                  }
-              }
-          }
-          
-        }    
-      }
-     
-      // Example $cars[0]
-      //END OF FIFTH SET
-      
-    //FIRST SET
-   $nationname = array("Afghanistan","Bahrain","Bangladesh","Bhutan","Brunei","Cambodia","China","India","Indonesia","Iran");
-//,"Iraq","Israel","Japan","Jordan","Kazakhstan","Kuwait","Kyrgyzstan","Laos","Lebanon","Malaysia","Maldives","Mongolia","Myanmar","Nepal","Northkorea","Oman","Pakistan","Palestine","Philippines","Qatar","SaudiArabia","Singapore","SouthKorea","SriLanka","Syria","Taiwan","Tajikistan","Thailand","Timor-Leste""Turkmenistan","UnitedArabEmirates","Uzbekistan","Vietnam","Yemen"
-   $nationshort =array("AFG","BHR","BAN","BHU","BRU","CAM","CHN","IND","IDN","IRN");
-   $shortsmall=array("afg","bhr","ban","bhu","bru","cam","chn","ind","idn","irn");
-   $thainame=array("อัฟกานิสถาน","บาห์เรน","บังกลาเทศ","ภูฏาน","บรูไน","กัมพูชา","จีน","อินเดีย","อินโดนีเซีย","อิหร่าน");
-for($j=0 ;$j<10 ; $j++)
-    {
-   if($row1["$nationname[$j]"]==1)
-      {
-        $short=$nationshort[$j];
-        $funame=$thainame[$j];
-        $small=$shortsmall[$j];
-        //echo $short." ";
-        $sql="SELECT Usrname,Newsadd,Adddate,Fileup FROM $short ORDER BY ID DESC";
-
-        $result=mysqli_query($conn,$sql);
-        
-    
-        if(mysqli_num_rows($result)>0)
-        {
-            for($i=0 ; $i<3 ; $i++)
-            {
-                $row = mysqli_fetch_assoc($result);
-                if($row["Newsadd"]!=NULL)
-                {
-                  print "<div class='card'><div class='card-body'>";
-                  print "<p class='auther'> <b>". $row["Usrname"] ."</b> โพสต์ใน <a href='nation/".$small.".html'>".$funame."</a> เมื่อ ".$row["Adddate"]."</p>";
-                   if($row["Fileup"]!=NULL)
-                  {
-                    print "<img class='imageup' src='nation/File/".$row["Fileup"]."'> <br>";
-                  }
-                  print $row["Newsadd"];
-                  print "</div></div>";
-                  print "<br>";
-                }
-            }
-        }
-        
-      }    
-    }
-   
-    // Example $cars[0]
-    //END OF FIRST SET
-   
-       //SECOND SET
-   $nationname = array("Iraq","Israel","Japan","Jordan","Kazakhstan","Kuwait","Kyrgyzstan","Laos","Lebanon","Malaysia");
-   //,,"Maldives","Mongolia","Myanmar","Nepal","Northkorea","Oman","Pakistan","Palestine","Philippines","Qatar","SaudiArabia","Singapore","SouthKorea","SriLanka","Syria","Taiwan","Tajikistan","Thailand","Timor-Leste""Turkmenistan","UnitedArabEmirates","Uzbekistan","Vietnam","Yemen"
-      $nationshort =array("IRQ","ISR","JPN","JOR","KAZ","KUW","KGZ","LAO","LIB","MAS");
-      $shortsmall=array("irq","isr","jpn","jor","kaz","kuw","kgz","lao","lib","mas");
-      $thainame=array("อิรัก","อิสราเอล","ญี่ปุ่น","จอร์แดน","คาซัคสถาน","คูเวต","คีร์กีซสถาน","ลาว","เลบานอน","มาเลเซีย");
-   for($j=0 ;$j<10 ; $j++)
-       {
-      if($row1["$nationname[$j]"]==1)
-         {
-           $short=$nationshort[$j];
-           $funame=$thainame[$j];
-           $small=$shortsmall[$j];
-           //echo $short." ";
-           $sql="SELECT Usrname,Newsadd,Adddate,Fileup FROM $short ORDER BY ID DESC";
-   
-           $result=mysqli_query($conn,$sql);
-           
-       
-           if(mysqli_num_rows($result)>0)
-           {
-               for($i=0 ; $i<3 ; $i++)
-               {
-                   $row = mysqli_fetch_assoc($result);
-                   if($row["Newsadd"]!=NULL)
-                   {
-                    print "<div class='card'><div class='card-body'>";
-                     print "<p class='auther'> <b>". $row["Usrname"] ."</b> โพสต์ใน <a href='nation/".$small.".html'>".$funame."</a> เมื่อ ".$row["Adddate"]."</p>";
+                    print "<p class='auther'> <b>". $row["Usrname"] ."</b> โพสต์ใน ".$funame." เมื่อ ".$row["Adddate"]."</p>";
                      if($row["Fileup"]!=NULL)
-                     {
-                    print "<img class='imageup' src='nation/File/".$row["Fileup"]."'> <br>";
-                      }
-                     print $row["Newsadd"];
-                     print "</div></div>";
-                     print "<br>";
-                   }
-               }
-           }
-           
-         }    
-       }
-      
-       // Example $cars[0]
-       //END OF SECOND SET
-      
- //THIRD SET
- $nationname = array("Maldives","Mongolia","Myanmar","Nepal","Northkorea","Oman","Pakistan","Palestine","Philippines","Qatar");
- //,,"SaudiArabia","Singapore","SouthKorea","SriLanka","Syria","Taiwan","Tajikistan","Thailand","Timor-Leste""Turkmenistan","UnitedArabEmirates","Uzbekistan","Vietnam","Yemen"
-    $nationshort =array("MDV","MNG","MYA","NPE","PRK","OMA","PAK","PLE","PHI","QAT");
-    $shortsmall=array("mdv","mng","mya","npe","prk","oma","pak","ple","phi","qat");
-    $thainame=array("มัลดีฟส์","มองโกเลีย","เมียนมาร์","เนปาล","เกาหลีเหนือ","โอมาน","ปากีสถาน","ปาเลสไตน์","ฟิลิปปินส์","กาตาร์");
- for($j=0 ;$j<10 ; $j++)
-     {
-    if($row1["$nationname[$j]"]==1)
-       {
-         $short=$nationshort[$j];
-         $funame=$thainame[$j];
-         $small=$shortsmall[$j];
-         //echo $short." ";
-         $sql="SELECT Usrname,Newsadd,Adddate,Fileup FROM $short ORDER BY ID DESC";
- 
-         $result=mysqli_query($conn,$sql);
-         
-     
-         if(mysqli_num_rows($result)>0)
-         {
-             for($i=0 ; $i<3 ; $i++)
-             {
-                 $row = mysqli_fetch_assoc($result);
-                 if($row["Newsadd"]!=NULL)
-                 {
-                   print "<div class='card'><div class='card-body'>";
-                   print "<p class='auther'> <b>". $row["Usrname"] ."</b> โพสต์ใน <a href='nation/".$small.".html'>".$funame."</a> เมื่อ ".$row["Adddate"]."</p>";
-                   if($row["Fileup"]!=NULL)
-                   {
-                     print "<img class='imageup' src='nation/File/".$row["Fileup"]."'> <br>";
-                   }
-                   print $row["Newsadd"];
-                   print "</div></div>";
-                   print "<br>";
-                 }
-             }
-         }
-         
-       }    
-     }
-    
-     // Example $cars[0]
-     //END OF THIRD SET
+                    {
+                      print "<img class='imageup' src='nation/File/".$row["Fileup"]."'> <br>";
+                    }
+                    print $row["Newsadd"];
+                    $idnews=$row["ID"];
+                    print "<form action='deletepost.php' method='post'>
+                           <ul> <input type='checkbox' class='form-check-input' name='country' value='$short' required > ยืนยันการลบ <br></ul>
+                            <button class='btn btn-light' type='submit' name='deleteitem' value='$idnews'><i class='fa fa-minus-circle' aria-hidden='true'></i> ลบ </button>
+                            </form> ";
+                    print "</div></div>";
+                    print "<br>";
+                  }
+              }
+          }
+          
+            
+      }
 
 
-
-
-
-
-    
-    mysqli_close($conn);
-
-    ?>
+?>
+    </div>
+  </div>
        
 
     </div>
     <br><br><br><br><br>
 <nav class="navbar fixed-bottom navbar-light bg-light" >
   <nav class="nav nav-pills nav-justified">
-    <a class="nav-item nav-link " href="#"><i class="fa fa-home" aria-hidden="true"></i><br>Home</a>
+    <a class="nav-item nav-link " href="home.php"><i class="fa fa-home" aria-hidden="true"></i><br>Home</a>
 
   
     <a class="nav-item nav-link" style="background-color:gainsboro ;" data-toggle="modal" data-target="#postmodal" href="#"><i class="fa fa-paper-plane-o" aria-hidden="true"></i><br>Post</a>
@@ -407,7 +226,7 @@ for($j=0 ;$j<10 ; $j++)
         </button>
       </div>
       <div class="modal-body">
-        <form action="nation/rec.php" method="post" enctype="multipart/form-data" >
+        <form action="nation/rec.php" method="post" enctype="multipart/form-data">
         <textarea class="form-control" name="News" rows="3"></textarea><br>
         <select class="form-control" name="country">
         <option value="AFG">อัฟกานิสถาน</option>
@@ -457,7 +276,7 @@ for($j=0 ;$j<10 ; $j++)
      
 
 </select>
-      <input  type="file" name="photo" id="photo">
+<input  type="file" name="photo" id="photo">
       <p><b>ข้อกำหนดในการโพสรูปภาพ</b> คือ ต้องไม่โพสภาพที่สื่อความหมายร้ายแรง ภาพอนาจารย์ หรือภาพที่ไม่สมควรโพส</p>
       <button type="submit" class="btn btn-primary" >โพสต์</button>
 

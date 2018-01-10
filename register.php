@@ -37,13 +37,13 @@
     if(mysqli_query($conn,$sql))
         echo "ระบบได้เพิ่มข้อมูลของคุณเรียนร้อยแล้ว กลับไปที่ Login ได้เลย ";
     else
-        echo "ERROR มีบางอย่างผิดพลาด กรุณาลงทะเบียนใหม่ครับ".mysqli_error($conn);
+        echo "ERROR มีบางอย่างผิดพลาด คุณอาจจะใส่ Username หรือ Email ตรงกับที่มีคนใช้อยู่ในระบบแล้ว กรุณาลงทะเบียนใหม่ครับ".mysqli_error($conn);
 
     mysqli_close($conn);
     ?>
 
     </p>
-    <a href="login.html"><button class="btn btn-primary">Login</button></a> 
+    <a href="index.html"><button class="btn btn-primary">Login</button></a> 
     <a href="register.html"><button class="btn btn-secondary">Register</button></a>
     
       </div>

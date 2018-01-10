@@ -38,7 +38,7 @@
     <div class="container">
       <h2 class="welcome">
       <?php 
-    $email=$_POST["email"];
+    $username=$_POST["username"];
     $password=$_POST["password"];
     
     
@@ -50,7 +50,7 @@
     session_start();
      while($row = mysqli_fetch_assoc($result))
         {
-             if($row["Email"]==$email)
+             if($row["Username"]==$username)
              {
                  if($row["Pass"]==$password){
                     $user=$row["Username"];
@@ -61,13 +61,13 @@
                  }
                  else{
                         print "คุณใส่ Password ผิดครับ" ;
-                        print "<br><a href='index.html'> Login ใหม่อีกครั้ง </a> "  ;
+                        print "<br><a href='usernamelogin.html'> Login ใหม่อีกครั้ง </a> "  ;
                  }
              }
              else
              {
                 print "คุณใส่ Email ผิดครับ";
-                print "<br><a href='index.html'> Login ใหม่อีกครั้ง </a> "  ;
+                print "<br><a href='usernamelogin.html'> Login ใหม่อีกครั้ง </a> "  ;
              }
         }
 
